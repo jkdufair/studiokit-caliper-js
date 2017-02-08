@@ -1,0 +1,16 @@
+{
+  "name": "studiokit-caliper-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "caliperjs": "git@github.com:builtbywill/caliper-js-public.git#feature/promises",
+    "debug": "^2.6.0",
+    "moment": "^2.17.1",
+    "node-fetch": "^1.6.3",
+    "uuid": "^3.0.1"
+  }
+}
