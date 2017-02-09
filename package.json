@@ -15,6 +15,7 @@
   "dependencies": {
     "caliperjs": "git@github.com:builtbywill/caliper-js-public.git#feature/node",
     "debug": "^2.6.0",
+    "lodash": "^4.17.4",
     "moment": "^2.17.1",
     "uuid": "^3.0.1"
   },

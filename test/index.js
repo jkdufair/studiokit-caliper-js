@@ -39,4 +39,4 @@ caliperService.setSoftwareApplication('https://app.example.edu', 'Example App');
 caliperService.setPerson('https://example.edu/user/1', 'Some', 'Guy');
 caliperService.startSession();
 caliperService.endSession();
-caliperService.sendQueue();
+caliperService.send();
