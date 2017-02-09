@@ -1,14 +1,11 @@
 var StudioKit = require('../lib');
 
+var id =  "https://example.edu/sensor";
 var options = {
-	sensorId: "https://example.edu/sensor",
-	sensorOptions: {
-		hostname: 'eventstore.example.edu',
-		port: '443',
-		path: '/events',
-		method: 'POST'
-	},
-	sendInterval: 5000
+	hostname: 'eventstore.example.edu',
+	port: '443',
+	path: '/events',
+	method: 'POST'
 };
 
 var token = {
@@ -37,8 +34,9 @@ var storageService = {
 	}
 };
 
-var caliperService = new StudioKit.CaliperService(options, getToken, storageService);
+var caliperService = new StudioKit.CaliperService(id, options, getToken, storageService);
 caliperService.setSoftwareApplication('https://example.edu/sensor', 'Example');
 caliperService.setPerson('https://example.edu/user/1', 'Some', 'Guy');
 caliperService.startSession();
 caliperService.endSession();
+caliperService.sendQueue();

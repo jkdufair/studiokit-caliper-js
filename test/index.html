@@ -7,21 +7,23 @@
 	<script src="../dist/studiokit-caliper.js"></script>
 	<script>
 
+		var id =  "https://example.edu/sensor";
 		var options = {
-			sensorId: "https://example.edu/sensor",
-			sensorOptions: {
-				hostname: 'eventstore.example.edu',
-				port: '443',
-				path: '/events',
-				method: 'POST'
-			},
-			sendInterval: 5000
+			hostname: 'eventstore.example.edu',
+			port: '443',
+			path: '/events',
+			method: 'POST'
+		};
+
+		var token = {
+			accessToken: 'test', //response.data['access_token'],
+			expires: 'Thu, 09 Feb 2017 06:08:58 GMT' //response.data['.expires']
 		};
 
 		// e.g. fetch(), $http.get()
 		var getToken = function() {
 			return new Promise(function(resolve, reject){
-				resolve();
+				resolve(token);
 			});
 		};
 
@@ -39,10 +41,12 @@
 			}
 		};
 
-		var caliperService = new StudioKit.CaliperService(options, getToken, storageService);
+		var caliperService = new StudioKit.CaliperService(id, options, getToken, storageService);
 		caliperService.setSoftwareApplication('https://example.edu/sensor', 'Example');
 		caliperService.setPerson('https://example.edu/user/1', 'Some', 'Guy');
 		caliperService.startSession();
+		caliperService.endSession();
+		caliperService.sendQueue();
 
 	</script>
 </body>
