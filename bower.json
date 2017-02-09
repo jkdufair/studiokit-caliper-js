@@ -2,5 +2,5 @@
   "name": "studiokit-caliper-js",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js"
+  "main": "dist/studiokit-caliper.js"
 }
