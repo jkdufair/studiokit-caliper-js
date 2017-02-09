@@ -4,8 +4,9 @@
 </head>
 <body>
 	<h1>StudioKit Caliper JS Test</h1>
-	<script src="dist/studiokit-caliper.js"></script>
+	<script src="../dist/studiokit-caliper.js"></script>
 	<script>
+
 		var options = {
 			sensorId: "https://example.edu/sensor",
 			sensorOptions: {
@@ -42,6 +43,7 @@
 		caliperService.setSoftwareApplication('https://example.edu/sensor', 'Example');
 		caliperService.setPerson('https://example.edu/user/1', 'Some', 'Guy');
 		caliperService.startSession();
+
 	</script>
 </body>
 </html>
