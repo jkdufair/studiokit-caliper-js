@@ -17,6 +17,9 @@ node_modules
 *.log
 *.gz
 
+# build
+dist
+
 # Coveralls
 coverage
 
