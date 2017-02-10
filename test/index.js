@@ -9,7 +9,7 @@ var options = {
 };
 
 var token = {
-	accessToken: 'test', //response.data['access_token'],
+	accessToken: 'THIS_IS_NOT_A_REAL_ACCESS_TOKEN', //response.data['access_token'],
 	expires: 'Thu, 09 Feb 2017 06:08:58 GMT' //response.data['.expires']
 };
 
@@ -39,4 +39,10 @@ caliperService.setSoftwareApplication('https://app.example.edu', 'Example App');
 caliperService.setPerson('https://example.edu/user/1', 'Some', 'Guy');
 caliperService.startSession();
 caliperService.endSession();
-caliperService.send();
+caliperService.send()
+	.catch(function(err) {
+		console.error('error', err);
+	})
+	.then(function(result) {
+		console.log('success');
+	});
