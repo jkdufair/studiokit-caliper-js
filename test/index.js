@@ -44,5 +44,5 @@ caliperService.send()
 		console.error('error', err);
 	})
 	.then(function(result) {
-		console.log('success');
+		console.log('success', result);
 	});
