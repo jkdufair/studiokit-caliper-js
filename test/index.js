@@ -38,11 +38,13 @@ var caliperService = new StudioKit.CaliperService(id, options, getToken, storage
 caliperService.setSoftwareApplication('https://app.example.edu', 'Example App');
 caliperService.setPerson('https://example.edu/user/1', 'Some', 'Guy');
 caliperService.startSession();
-caliperService.endSession();
-caliperService.send()
-	.catch(function(err) {
-		console.error('error', err);
-	})
-	.then(function(result) {
-		console.log('success');
-	});
+setTimeout(function() {
+	caliperService.endSession();
+	caliperService.send()
+		.catch(function(err) {
+			console.error('error', err);
+		})
+		.then(function(result) {
+			console.log('success', result);
+		});
+}, 1000 * 60 * 60);
