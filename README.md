@@ -2,12 +2,14 @@
 
 ## Installation
 
-### Node
 ```
 npm install --save git@sprinklesthecat.ics.purdue.edu:studiokit-js/studiokit-caliper-js.git
 ```
 
-### Bower
+## Build for use without Node
+
 ```
-bower install --save git@sprinklesthecat.ics.purdue.edu:studiokit-js/studiokit-caliper-js.git#bower
+npm run build
 ```
+
+This will create a browserified file in the `dist` folder.
