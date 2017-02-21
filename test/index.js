@@ -2,9 +2,10 @@ var StudioKit = require('../lib');
 
 var id =  "https://app.example.edu/sensor";
 var options = {
-	hostname: 'eventstore.example.edu',
-	port: '443',
-	path: '/events',
+	protocol: 'http:',
+	hostname: 'localhost',
+	port: '3001',
+	path: '/collector',
 	method: 'POST'
 };
 
@@ -41,10 +42,11 @@ caliperService.startSession();
 setTimeout(function() {
 	caliperService.endSession();
 	caliperService.send()
-		.catch(function(err) {
-			console.error('error', err);
-		})
 		.then(function(result) {
 			console.log('success', result);
+		})
+		.catch(function(err) {
+			console.error(err);
 		});
-}, 1000 * 60 * 60);
+//}, 1000 * 60 * 60);
+}, 1000 * 3);
