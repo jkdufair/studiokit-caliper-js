@@ -11,7 +11,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node test/index.js",
-    "build": "rm -rf ./dist/ && mkdir ./dist/ && browserify lib/index.js --outfile dist/studiokit-caliper.js --standalone StudioKit"
+    "build": "rm -rf ./dist/ && mkdir ./dist/ && browserify ./index.js --outfile ./dist/studiokit-caliper.js --standalone StudioKit"
   },
   "dependencies": {
     "caliperjs": "git+ssh://git@sprinklesthecat.ics.purdue.edu:caliper/caliper-js.git",
