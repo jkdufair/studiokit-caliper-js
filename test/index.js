@@ -24,13 +24,13 @@ var getToken = function() {
 // e.g. localStorage
 var store = {};
 var storageService = {
-	get: function(key) {
+	getItem: function(key) {
 		return store[key];
 	},
-	set: function(key, value) {
+	setItem: function(key, value) {
 		store[key] = value;
 	},
-	remove: function(key) {
+	removeItem: function(key) {
 		delete store[key]
 	}
 };
