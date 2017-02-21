@@ -1,4 +1,4 @@
-var StudioKit = require('../lib');
+var StudioKit = require('../');
 
 var id =  "https://app.example.edu/sensor";
 var options = {
