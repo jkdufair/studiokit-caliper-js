@@ -10,7 +10,7 @@
   "license": "",
   "main": "index.js",
   "scripts": {
-    "test": "DEBUG=CaliperService* node test/index.js",
+    "test": "DEBUG=app* node test/index.js",
     "build": "rm -rf ./dist/ && mkdir ./dist/ && browserify ./index.js --outfile ./dist/studiokit-caliper.js --standalone StudioKit"
   },
   "dependencies": {
