@@ -14,7 +14,7 @@ var token = {
 	expires: 'Thu, 09 Feb 2017 06:08:58 GMT' //response.data['.expires']
 };
 
-// e.g. fetch(), $http.get()
+// e.g. fetch (React), $http.get() (Angular 1)
 var getToken = function() {
 	return new Promise(function(resolve, reject){
 		resolve(token);
