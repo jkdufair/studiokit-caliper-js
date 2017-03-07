@@ -230,9 +230,9 @@ cached-path-relative@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/cached-path-relative/-/cached-path-relative-1.0.1.tgz#d09c4b52800aa4c078e2dd81a869aac90d2e54e7"
 
-"caliperjs@git+https://github.com/purdue-tlt/caliper-js.git#develop":
-  version "1.0.1"
-  resolved "git+https://github.com/purdue-tlt/caliper-js.git#4d71cf8eccbc1061a92a92a668ab37ace4308f0b"
+"caliperjs@git+https://github.com/purdue-tlt/caliper-js.git#1.0.2":
+  version "1.0.2"
+  resolved "git+https://github.com/purdue-tlt/caliper-js.git#0bde55ce29c846e6c98dd0f6aaabc737e235a7c5"
   dependencies:
     caterpillar "3.0.x"
     caterpillar-browser "3.0.x"
