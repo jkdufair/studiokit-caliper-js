@@ -3,7 +3,7 @@
 ## Installation
 
 ```
-npm install --save git@sprinklesthecat.ics.purdue.edu:studiokit-js/studiokit-caliper-js.git
+npm install --save studiokit-caliper-js
 ```
 
 ## Build for use without Node
