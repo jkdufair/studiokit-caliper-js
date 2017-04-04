@@ -4,15 +4,20 @@ studiokit-caliper-js is a common library of services for implementing applicatio
 
 ## Features
 
-* Saves events to a queue that is persisted to localStorage
+* Events saved to a queue that is persisted to localStorage
 * Convenience methods to start and end Session
 * Session keep-alive update, using a change to `dateModified`, sent on an time interval
+* Session end automatically tracked using `window.onbeforeunload`
 
 ## Installation
 
 ```
 npm install --save studiokit-caliper-js
 ```
+
+## Options
+
+## Implementation
 
 ## Build for use without Node
 
