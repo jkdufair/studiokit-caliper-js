@@ -1,13 +1,20 @@
 {
   "name": "studiokit-caliper-js",
-  "version": "1.0.4",
-  "description": "Common library for using Caliper JS in Studio projects",
-  "private": true,
+  "version": "1.0.5",
+  "description": "Common library of services used to instrument applications with Caliper JS",
+  "keywords": [
+    "purdue",
+    "purdue-tlt",
+    "caliper",
+    "caliperjs",
+    "caliper-js",
+    "imsglobal"
+  ],
+  "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "git@sprinklesthecat.ics.purdue.edu:studiokit-js/studiokit-caliper-js.git"
+    "url": "https://github.com/purdue-tlt/studiokit-caliper-js.git"
   },
-  "license": "",
   "main": "index.js",
   "scripts": {
     "test": "DEBUG=app* node test/index.js",
