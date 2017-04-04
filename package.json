@@ -1,6 +1,6 @@
 {
   "name": "studiokit-caliper-js",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Common library of services used to instrument applications with Caliper JS",
   "keywords": [
     "purdue",
