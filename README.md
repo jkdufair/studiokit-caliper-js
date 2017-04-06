@@ -1,8 +1,8 @@
 # studiokit-caliper-js
 
-**studiokit-caliper-js** is a common library of services for implementing applications with the [caliper-js](https://github.com/purdue-tlt/caliper-js) Javascript client for [Caliper](http://www.imsglobal.org/caliper) (an implementation of the Caliper SensorAPI™).
+**studiokit-caliper-js** is a common library of services for implementing applications with the [caliper-js](https://github.com/purdue-tlt/caliper-js) Javascript client for [IMS Global Caliper Analytics](http://www.imsglobal.org/caliper) (an implementation of the Caliper SensorAPI™).
 
-**studiokit-caliper-js** current supports **Caliper v1**
+**studiokit-caliper-js** current supports **Caliper v1.0**
 
 ## Features
 
