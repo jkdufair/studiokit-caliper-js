@@ -43,7 +43,7 @@ You can then access the JavaScript global parameter `StudioKit`.
 ## Options
 
 | name |  required | type | description | default value |
-| ------ | ----------- | ------------- |
+| --- | --- | --- | --- | --- |
 | sensorId | **true** | string | The caliper-js Sensor Id |  |
 | sensorOptions | **true** | Object | The caliper-js Sensor Options [see the node https docs](https://nodejs.org/api/https.html#https_https_request_options_callback) |  |
 | appId | **true** | string (IRI) | The JSON-LD `@id` of the Caliper SoftwareApplication | |
