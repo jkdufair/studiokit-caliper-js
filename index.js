@@ -15,5 +15,7 @@
 */
 
 var CaliperService = require('./lib/caliper-service');
+var BrowserCaliperService = require('./lib/browser-caliper-service');
 
 module.exports.CaliperService = CaliperService;
+module.exports.BrowserCaliperService = BrowserCaliperService;

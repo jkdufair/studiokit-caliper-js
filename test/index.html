@@ -28,30 +28,15 @@
 			});
 		};
 
-		// e.g. localStorage
-		var store = {};
-		var storageService = {
-			getItem: function(key) {
-				return store[key];
-			},
-			setItem: function(key, value) {
-				store[key] = value;
-			},
-			removeItem: function(key) {
-				delete store[key]
-			}
-		};
-
 		var options = {
 			sensorId: sensorId,
 			sensorOptions: sensorOptions,
 			appId: 'https://app.example.edu',
 			appName: 'Example App',
-			getToken: getToken,
-			storageService: storageService
+			getToken: getToken
 		};
 
-		var caliperService = new StudioKit.CaliperService(options);
+		var caliperService = new StudioKit.BrowserCaliperService(options);
 		caliperService.setPerson('https://example.edu/user/1', 'Some', 'Guy');
 		caliperService.startSession();
 		setTimeout(function() {
