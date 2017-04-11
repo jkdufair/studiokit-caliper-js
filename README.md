@@ -58,4 +58,3 @@ You can then access the JavaScript global parameter `StudioKit`.
 | sessionPauseThreshold | false | number (milliseconds) | The amount of time a Session can be "paused" (e.g. user closes the page or refreshes the page and then returns) before the Session is ended and a new one is started. | `1000 * 60` // 1 minute |
 | onError | false | function | A function that is called when an error is encountered, e.g. `function(err) {}` | `console.error(err)` |
 | isEnabled | false | function | A function that returns a boolean, denoting if the service should be enabled. | `function() {return true;}` |
-| isGetTokenAuthorized | false | function | A function that returns a boolean, denoting if the `getToken` action is authorized and should be attempted. | `function() {return true;}` |
