@@ -17,7 +17,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "test": "DEBUG=app* node test/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rm -rf ./dist/ && mkdir ./dist/ && browserify ./index.js --outfile ./dist/studiokit-caliper.js --standalone StudioKit"
   },
   "dependencies": {
