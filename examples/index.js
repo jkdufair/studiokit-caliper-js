@@ -2,7 +2,7 @@ var StudioKit = require('../');
 
 var sensorId =  "https://app.example.edu/sensor";
 var sensorOptions = {
-	protocol: 'http:',
+	protocol: 'https:',
 	hostname: 'localhost',
 	port: '3001',
 	path: '/collector',

@@ -1,6 +1,6 @@
 {
   "name": "studiokit-caliper-js",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Common library of services used to instrument applications with Caliper JS",
   "keywords": [
     "purdue",
@@ -17,18 +17,28 @@
   },
   "main": "index.js",
   "scripts": {
-    "test": "DEBUG=app* node test/index.js",
+    "test": "npm run test-unit",
+    "test-unit": "mocha lib/**/*.test.js",
+    "test-unit-cover": "istanbul cover _mocha lib/**/*.test.js",
     "build": "rm -rf ./dist/ && mkdir ./dist/ && browserify ./index.js --outfile ./dist/studiokit-caliper.js --standalone StudioKit"
   },
   "dependencies": {
     "caliperjs": "git+https://github.com/purdue-tlt/caliper-js.git#1.0.2",
-    "debug": "^2.6.0",
+    "debug": "^2.6.3",
     "lodash": "^4.17.4",
-    "moment": "^2.17.1",
+    "moment": "^2.18.1",
+    "raven-js": "^3.14.0",
     "standard-http-error": "^2.0.0",
     "uuid": "^3.0.1"
   },
   "devDependencies": {
-    "browserify": "^14.0.0"
+    "browserify": "^14.3.0",
+    "chai": "3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "chai-things": "^0.2.0",
+    "istanbul": "^0.4.5",
+    "mocha": "3.2.0",
+    "sinon": "^2.1.0",
+    "sinon-chai": "^2.9.0"
   }
 }
