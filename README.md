@@ -57,4 +57,3 @@ You can then access the JavaScript global parameter `StudioKit`.
 | sessionKeepAliveInterval | false | number (milliseconds) | How often the "keep alive" request will be sent, enabled by `autoKeepAliveSession`. | `1000 * 60 * 15`  // 15 minutes |
 | sessionPauseThreshold | false | number (milliseconds) | The amount of time a Session can be "paused" (e.g. user closes the page or refreshes the page and then returns) before the Session is ended and a new one is started. | `1000 * 60` // 1 minute |
 | onError | false | function | A function that is called when an error is encountered, e.g. `function(err) {}` | `console.error(err)` |
-| isEnabled | false | function | A function that returns a boolean, denoting if the service should be enabled. | `function() {return true;}` |
