@@ -8,8 +8,8 @@
 
 * **Persistent Queue**: Events and Entities are saved to a queue that is persisted to localStorage, or another storage method of your choice.
 * **Convenience Methods**: Easily start and end Sessions with simplified methods.
-* **Session Keep-Alive**: The current Session's `dateModified` is periodically updated and sent to the EventStore on a timer, to track Session activity before it is ended.
-* **Session Pause**: Sessions are paused automatically using `window.onbeforeunload` when the user leaves the site or reloads the page. The Session is either resumed or ended upon returning to the site, based on a threshold.
+* **Session Keep-Alive**: The current Session's `dateModified` is periodically updated and sent to the EventStore to track Session activity before it is ended.
+* **Session End**: Sessions are ended automatically when the user is idle (no mouse, touch, keyboard, scroll events) or away from the app for longer than the `sessionEndThreshold`. 
 
 ## Installation
 
