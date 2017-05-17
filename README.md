@@ -53,7 +53,6 @@ You can then access the JavaScript global parameter `StudioKit`.
 | autoSend | false | boolean | Whether or not to send the queue of Caliper events on a timer. | true |
 | sendInterval | false | number (milliseconds) | How often a request containing the current queue of Caliper events is sent, enabled by `autoSend`. | `1000 * 10` // 10 seconds |
 | sessionIriPrefix | false | string | The value with which to prefix all Caliper Session `@id` values. Will be prefixed to form valid IRI, e.g. `${sessionIriPrefix}/session/${uuid}` | `null`, defaults to `appId` |
-| autoKeepAliveSession | false | boolean | Whether or not to send a "keep alive" request on a timer. The Caliper Session's `dateModified` field will be updated, and the Entity sent to the EventStore to be updated. | `true` |
-| sessionKeepAliveInterval | false | number (milliseconds) | How often the "keep alive" request will be sent, enabled by `autoKeepAliveSession`. | `1000 * 60 * 15`  // 15 minutes |
-| sessionPauseThreshold | false | number (milliseconds) | The amount of time a Session can be "paused" (e.g. user closes the page or refreshes the page and then returns) before the Session is ended and a new one is started. | `1000 * 60` // 1 minute |
+| sessionEndThreshold | false | number (milliseconds) | The amount of time a Session can be idle (e.g. no mouse, keyboard, touch, or scroll events) before the Session is ended. | `1000 * 60 * 30` // 30 minutes |
+| sessionKeepAliveThreshold | false | number (milliseconds) | How often the "keep alive" request will be sent. | `1000 * 60 * 15`  // 15 minutes |
 | onError | false | function | A function that is called when an error is encountered, e.g. `function(err) {}` | `console.error(err)` |
