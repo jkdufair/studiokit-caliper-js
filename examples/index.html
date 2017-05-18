@@ -4,6 +4,10 @@
 </head>
 <body>
 	<h1>StudioKit Caliper JS Test</h1>
+	<video width="400" controls>
+		<source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+		<source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg"> Your browser does not support HTML5 video.
+	</video>
 	<script src="../dist/studiokit-caliper.js"></script>
 	<script>
 
@@ -39,17 +43,6 @@
 		var caliperService = new StudioKit.BrowserCaliperService(options);
 		caliperService.setPerson('https://example.edu/user/1', 'Some', 'Guy');
 		caliperService.startSession();
-		setTimeout(function() {
-			caliperService.endSession();
-			caliperService.send()
-				.catch(function(err) {
-					console.error('error', err);
-				})
-				.then(function(result) {
-					console.log('success', result);
-				});
-		}, 1000 * 60 * 60);
-
 	</script>
 </body>
 </html>
