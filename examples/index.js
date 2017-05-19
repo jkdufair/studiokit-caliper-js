@@ -1,6 +1,6 @@
 var StudioKit = require('../');
 
-var sensorId =  "https://app.example.edu/sensor";
+var sensorId = "https://app.example.edu/sensor";
 var sensorOptions = {
 	protocol: 'https:',
 	hostname: 'localhost',
@@ -16,7 +16,7 @@ var token = {
 
 // e.g. fetch (React), $http.get() (Angular 1)
 var getToken = function() {
-	return new Promise(function(resolve, reject){
+	return new Promise(function(resolve, reject) {
 		resolve(token);
 	});
 };
@@ -56,5 +56,5 @@ setTimeout(function() {
 		.catch(function(err) {
 			console.error(err);
 		});
-//}, 1000 * 60 * 60);
+	//}, 1000 * 60 * 60);
 }, 1000 * 3);
