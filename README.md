@@ -9,7 +9,7 @@
 * **Persistent Queue**: Events and Entities are saved to a queue that is persisted to localStorage, or another storage method of your choice.
 * **Convenience Methods**: Easily start and end Sessions with simplified methods.
 * **Session Keep-Alive**: The current Session's `dateModified` is periodically updated and sent to the EventStore to track Session activity before it is ended.
-* **Session End**: Sessions are ended automatically when the user is idle (no mouse, touch, keyboard, scroll events) or away from the app for longer than the `sessionEndThreshold`. 
+* **Session Timeout**: Sessions are ended automatically (timed out) when the user is idle (no mouse, touch, keyboard, scroll events) or away from the app for longer than the `sessionTimeoutThreshold`. 
 
 ## Installation
 
@@ -53,6 +53,7 @@ You can then access the JavaScript global parameter `StudioKit`.
 | autoSend | false | boolean | Whether or not to send the queue of Caliper events on a timer. | true |
 | sendInterval | false | number (milliseconds) | How often a request containing the current queue of Caliper events is sent, enabled by `autoSend`. | `1000 * 10` // 10 seconds |
 | sessionIriPrefix | false | string | The value with which to prefix all Caliper Session `@id` values. Will be prefixed to form valid IRI, e.g. `${sessionIriPrefix}/session/${uuid}` | `null`, defaults to `appId` |
-| sessionEndThreshold | false | number (milliseconds) | The amount of time a Session can be idle (e.g. no mouse, keyboard, touch, or scroll events) before the Session is ended. | `1000 * 60 * 30` // 30 minutes |
-| sessionKeepAliveThreshold | false | number (milliseconds) | How often the "keep alive" request will be sent. | `1000 * 60 * 15`  // 15 minutes |
+| sessionTimeoutThreshold | false | number (milliseconds) | The amount of time a Session can be idle (e.g. no mouse, keyboard, touch, or scroll events) before the Session is ended as `TIMED_OUT`. | `1000 * 60 * 30` // 30 minutes |
+| sessionKeepAliveThreshold | false | number (milliseconds) | How often activity should trigger the Session to be "kept alive" by having its `dateModified` updated, and sent to the EventStore. | `1000 * 60 * 15`  // 15 minutes |
+| activityUpdateThreshold | false | number (milliseconds) | How often the activity sent to `onActivity()` (e.g. mouse, keyboard, touch, or scroll events, or manual calls) is processed. | `1000 * 60`  // 1 minute |
 | onError | false | function | A function that is called when an error is encountered, e.g. `function(err) {}` | `console.error(err)` |
