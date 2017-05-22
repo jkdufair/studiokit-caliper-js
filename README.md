@@ -1,5 +1,7 @@
 # studiokit-caliper-js
 
+[![Coverage Status](https://coveralls.io/repos/purdue-tlt/studiokit-caliper-js/badge.svg?branch=master)](https://coveralls.io/r/purdue-tlt/studiokit-caliper-js?branch=master)
+
 **studiokit-caliper-js** is a common library of services for implementing applications with the [caliper-js](https://github.com/purdue-tlt/caliper-js) Javascript client for [IMS Global Caliper Analytics](http://www.imsglobal.org/caliper) (an implementation of the Caliper SensorAPI™).
 
 **studiokit-caliper-js** current supports **Caliper v1.0**
@@ -56,4 +58,4 @@ You can then access the JavaScript global parameter `StudioKit`.
 | sessionTimeoutThreshold | false | number (milliseconds) | The amount of time a Session can be idle (e.g. no mouse, keyboard, touch, or scroll events) before the Session is ended as `TIMED_OUT`. | `1000 * 60 * 30` // 30 minutes |
 | sessionKeepAliveThreshold | false | number (milliseconds) | How often activity should trigger the Session to be "kept alive" by having its `dateModified` updated, and sent to the EventStore. | `1000 * 60 * 15`  // 15 minutes |
 | activityUpdateThreshold | false | number (milliseconds) | How often the activity sent to `onActivity()` (e.g. mouse, keyboard, touch, or scroll events, or manual calls) is processed. | `1000 * 60`  // 1 minute |
-| onError | false | function | A function that is called when an error is encountered, e.g. `function(err) {}` | `console.error(err)` |
+| onError | false | function | A function that is called when an error is encountered, e.g. `function(err) {}` | `null` |
