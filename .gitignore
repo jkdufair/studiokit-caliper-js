@@ -22,6 +22,7 @@ dist
 
 # Coveralls
 coverage
+.coveralls.yml
 
 # Benchmarking
 benchmarks/graphs
