@@ -1,8 +1,8 @@
 var StudioKit = require('../');
 
-var id =  "https://app.example.edu/sensor";
-var options = {
-	protocol: 'http:',
+var sensorId = "https://app.example.edu/sensor";
+var sensorOptions = {
+	protocol: 'https:',
 	hostname: 'localhost',
 	port: '3001',
 	path: '/collector',
@@ -16,7 +16,7 @@ var token = {
 
 // e.g. fetch (React), $http.get() (Angular 1)
 var getToken = function() {
-	return new Promise(function(resolve, reject){
+	return new Promise(function(resolve, reject) {
 		resolve(token);
 	});
 };
@@ -35,8 +35,16 @@ var storageService = {
 	}
 };
 
-var caliperService = new StudioKit.CaliperService(id, options, getToken, storageService);
-caliperService.setSoftwareApplication('https://app.example.edu', 'Example App');
+var options = {
+	sensorId: sensorId,
+	sensorOptions: sensorOptions,
+	appId: 'https://app.example.edu',
+	appName: 'Example App',
+	getToken: getToken,
+	storageService: storageService
+};
+
+var caliperService = new StudioKit.CaliperService(options);
 caliperService.setPerson('https://example.edu/user/1', 'Some', 'Guy');
 caliperService.startSession();
 setTimeout(function() {
@@ -48,5 +56,5 @@ setTimeout(function() {
 		.catch(function(err) {
 			console.error(err);
 		});
-//}, 1000 * 60 * 60);
+	//}, 1000 * 60 * 60);
 }, 1000 * 3);

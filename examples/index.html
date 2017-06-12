@@ -1,0 +1,48 @@
+<html>
+<head>
+	<title>StudioKit Caliper JS Test</title>
+</head>
+<body>
+	<h1>StudioKit Caliper JS Test</h1>
+	<video width="400" controls>
+		<source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+		<source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg"> Your browser does not support HTML5 video.
+	</video>
+	<script src="../dist/studiokit-caliper.js"></script>
+	<script>
+
+		var sensorId =  "https://app.example.edu/sensor";
+		var sensorOptions = {
+			protocol: 'https:',
+			hostname: 'localhost',
+			port: '3001',
+			path: '/collector',
+			method: 'POST'
+		};
+
+		var token = {
+			accessToken: 'THIS_IS_NOT_A_REAL_ACCESS_TOKEN', //response.data['access_token'],
+			expires: 'Thu, 09 Feb 2017 06:08:58 GMT' //response.data['.expires']
+		};
+
+		// e.g. fetch (React), $http.get() (Angular 1)
+		var getToken = function() {
+			return new Promise(function(resolve, reject){
+				resolve(token);
+			});
+		};
+
+		var options = {
+			sensorId: sensorId,
+			sensorOptions: sensorOptions,
+			appId: 'https://app.example.edu',
+			appName: 'Example App',
+			getToken: getToken
+		};
+
+		var caliperService = new StudioKit.BrowserCaliperService(options);
+		caliperService.setPerson('https://example.edu/user/1', 'Some', 'Guy');
+		caliperService.startSession();
+	</script>
+</body>
+</html>
