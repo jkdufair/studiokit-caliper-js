@@ -24,7 +24,8 @@
     "build": "rm -rf ./dist/ && mkdir ./dist/ && browserify ./index.js --outfile ./dist/studiokit-caliper.js --standalone StudioKit"
   },
   "dependencies": {
-    "caliperjs": "git+https://github.com/purdue-tlt/caliper-js.git#1.0.2",
+		"bluebird": "^3.5.0",
+    "caliperjs": "git+https://github.com/purdue-tlt/caliper-js.git#1.0.5",
     "debug": "^2.6.8",
     "local-storage-fallback": "^2.0.0",
     "lodash": "^4.17.4",
