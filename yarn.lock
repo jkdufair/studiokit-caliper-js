@@ -292,9 +292,9 @@ cached-path-relative@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/cached-path-relative/-/cached-path-relative-1.0.1.tgz#d09c4b52800aa4c078e2dd81a869aac90d2e54e7"
 
-"caliperjs@git+https://github.com/purdue-tlt/caliper-js.git#1.0.6":
-  version "1.0.6"
-  resolved "git+https://github.com/purdue-tlt/caliper-js.git#c0c3d675268fc50e3fb9fbb2f613e3d465ac6644"
+"caliperjs@git+https://github.com/purdue-tlt/caliper-js.git#1.0.7":
+  version "1.0.7"
+  resolved "git+https://github.com/purdue-tlt/caliper-js.git#ac82fb72bb02f9d60e90af34a867e752bd990039"
   dependencies:
     bluebird "^3.5.0"
     http-browserify "^1.7.0"
