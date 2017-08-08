@@ -1,6 +1,6 @@
 var StudioKit = require('../');
 
-var sensorId = "https://app.example.edu/sensor";
+var sensorId = 'https://app.example.edu/sensor';
 var sensorOptions = {
 	protocol: 'https:',
 	hostname: 'localhost',
@@ -31,7 +31,7 @@ var storageService = {
 		store[key] = value;
 	},
 	removeItem: function(key) {
-		delete store[key]
+		delete store[key];
 	}
 };
 
@@ -49,7 +49,8 @@ caliperService.setPerson('https://example.edu/user/1', 'Some', 'Guy');
 caliperService.startSession();
 setTimeout(function() {
 	caliperService.endSession();
-	caliperService.send()
+	caliperService
+		.send()
 		.then(function(result) {
 			console.log('success', result);
 		})
