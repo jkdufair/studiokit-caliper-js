@@ -33,7 +33,7 @@ function getOptions(store) {
 				store[key] = value;
 			},
 			removeItem: function(key) {
-				delete store[key]
+				delete store[key];
 			}
 		}
 	};
